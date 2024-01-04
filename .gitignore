@@ -396,3 +396,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/cs/BlazingPizzaSite/BlazingPizzaSite/BlazingPizzaSite/pizza.db
+/cs/BlazingPizzaSite/BlazingPizzaSite/BlazingPizzaSite/pizza.db-shm
+/cs/BlazingPizzaSite/BlazingPizzaSite/BlazingPizzaSite/pizza.db-wal
