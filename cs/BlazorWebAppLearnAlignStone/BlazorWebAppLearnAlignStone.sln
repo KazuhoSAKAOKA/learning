@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebAppLearnAlignStone", "BlazorWebAppLearnAlignStone\BlazorWebAppLearnAlignStone\BlazorWebAppLearnAlignStone.csproj", "{616F97DB-FEA2-4671-A619-84FABAFEB31C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebAppLearnAlignStone.Client", "BlazorWebAppLearnAlignStone\BlazorWebAppLearnAlignStone.Client\BlazorWebAppLearnAlignStone.Client.csproj", "{F90D9E07-D5B8-404D-8AA3-A1920ED321F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{616F97DB-FEA2-4671-A619-84FABAFEB31C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{616F97DB-FEA2-4671-A619-84FABAFEB31C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{616F97DB-FEA2-4671-A619-84FABAFEB31C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{616F97DB-FEA2-4671-A619-84FABAFEB31C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F90D9E07-D5B8-404D-8AA3-A1920ED321F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F90D9E07-D5B8-404D-8AA3-A1920ED321F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F90D9E07-D5B8-404D-8AA3-A1920ED321F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F90D9E07-D5B8-404D-8AA3-A1920ED321F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81E438EB-702A-4C3E-9221-F68F0E27BC00}
+	EndGlobalSection
+EndGlobal
