@@ -7,9 +7,9 @@ public class GameBehavior : MonoBehaviour
 {
 
     public bool showWinScreen = false;
-
+    public bool showLossScreen = false;
     private int _itemsCollected = 0;
-    private int _playerHP = 10;
+    private int _playerHP = 3;
     const int MaxItemsDefault = 1;
     public int maxItems = MaxItemsDefault;
     public string labelText = $"Collect all {MaxItemsDefault} items and win your freedom!";
@@ -42,8 +42,26 @@ public class GameBehavior : MonoBehaviour
         {
             _playerHP = value; 
             Debug.Log($"HP: {_playerHP}");
+            if(_playerHP <= 0)
+            {
+                showLossScreen = true;
+                Time.timeScale = 0.0f;
+            }
+            else
+            {
+                labelText = "Ouch... that's gotta hurt!";
+            }
         }
     }
+
+    void RestartLevel()
+    {
+        SceneManager.LoadScene(0);
+        Time.timeScale = 1.0f;
+        showLossScreen = false;
+        showWinScreen = false;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,13 +81,21 @@ public class GameBehavior : MonoBehaviour
             if(GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height - 50, 200, 50), "YOU WON!"))
             {
                 Debug.Log("Player has won the game!");
-                SceneManager.LoadScene(0);
-                Time.timeScale = 1.0f;
-                //showWinScreen = false;
-                //_itemsCollected = 0;
-                //_playerHP = 10;
+                RestartLevel();
             }
         }
+
+        if (showLossScreen)
+        {
+
+           if(GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height - 50, 200, 50), "YOU LOSE!"))
+            {
+                Debug.Log("Player has lost the game!");
+                labelText = "You want to try again?";
+                RestartLevel();
+            }
+        }
+
         //Debug.Log("OnGUI");
         GUI.Box(new Rect(20, 20, 150, 25), "Player Health: " + _playerHP);
         GUI.Box(new Rect(20, 50, 150, 25), "Items Collected: " + _itemsCollected);
